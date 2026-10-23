@@ -78,7 +78,10 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/cworld1/astro-theme-pure' }
+    social: [
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/cworld1/astro-theme-pure' },
+      { icon: 'rss', label: 'RSS', href: '/rss.xml' }
+    ]
   },
 
   // [Content]
@@ -87,14 +90,15 @@ export const theme: ThemeUserConfig = {
     externalLinks: {
       content: ' ↗',
       /** Properties for the external links element */
-      properties: {
-        style: 'user-select:none'
-      }
+      properties: { style: 'user-select:none' }
     },
     /** Blog page size for pagination (optional) */
     blogPageSize: 8,
+    /** Share buttons to show */
     // Currently support weibo, x, bluesky
     share: ['weibo', 'x', 'bluesky']
+    /** Enable image captions (default false) */
+    // imageCaption: true
   }
 }
 
